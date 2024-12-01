@@ -11,7 +11,7 @@ Versi ini tidak memiliki fitur yang sangat spesifik seperti Linkvertise dan pena
 
 1. **Clone Repository**  
    ```bash
-   git clone <repository-url>
+   git clone https://github.com/mhmmdrierie/Heliactyl-14.git```
 
 2. Masuk ke Direktori dan Konfigurasi `settings.json`
 
