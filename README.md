@@ -63,4 +63,4 @@ server {
 ```
 
 ## Kredit
-Saya hanya re-upload Heliactyl 14 karna file asli nya telah hilang. Author asli Heliactyl ini adalah Matt James & SRYDEN. Inc.
+Saya hanya meng-unggah ulang dan memperbaiki beberapa code pada Heliactyl 14. Author asli Heliactyl ini adalah Matt James & SRYDEN. Inc.
