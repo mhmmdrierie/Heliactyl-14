@@ -27,7 +27,9 @@ Versi ini tidak memiliki fitur yang sangat spesifik seperti Linkvertise dan pena
 
 ## Contoh Konfigurasi NGINX
 
-```server {
+```
+nginx
+server {
     listen 80;
     server_name <domain>;
     return 301 https://$server_name$request_uri;
@@ -37,10 +39,10 @@ server {
     listen 443 ssl http2;
 
     location /ws {
-        proxy_http_version 1.1;
-        proxy_set_header Upgrade $http_upgrade;
-        proxy_set_header Connection "upgrade";
-        proxy_pass "http://localhost:<port>/ws";
+      proxy_http_version 1.1;
+      proxy_set_header Upgrade $http_upgrade;
+      proxy_set_header Connection "upgrade";
+      proxy_pass "http://localhost:<port>/ws";
     }
 
     server_name <domain>;
@@ -49,13 +51,13 @@ server {
     ssl_certificate_key /etc/letsencrypt/live/<domain>/privkey.pem;
     ssl_session_cache shared:SSL:10m;
     ssl_protocols SSLv3 TLSv1 TLSv1.1 TLSv1.2;
-    ssl_ciphers HIGH:!aNULL:!MD5;
+    ssl_ciphers  HIGH:!aNULL:!MD5;
     ssl_prefer_server_ciphers on;
 
     location / {
-        proxy_pass http://localhost:<port>/;
-        proxy_buffering off;
-        proxy_set_header X-Real-IP $remote_addr;
+      proxy_pass http://localhost:<port>/;
+      proxy_buffering off;
+      proxy_set_header X-Real-IP $remote_addr;
     }
 }
 ```
